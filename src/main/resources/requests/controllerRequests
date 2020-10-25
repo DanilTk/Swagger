@@ -1,0 +1,13 @@
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Harry Potter",
+  "isbn": "test"
+}
+
+###
+
+GET http://localhost:8080/books/2
+Content-Type: application/json
