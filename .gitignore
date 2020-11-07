@@ -1,6 +1,4 @@
-lib/
-web/
-Swagger.iml
+target
 .idea
+Swagger.iml
 *.jar
-target/

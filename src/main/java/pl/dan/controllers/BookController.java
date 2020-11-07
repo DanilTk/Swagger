@@ -24,8 +24,7 @@ public class BookController {
     @GetMapping("/{id}")
     public Book getBook(@PathVariable Long id) {
         return books.stream()
-                .filter(b -> b.getId()
-                        .equals(id))
+                .filter(b -> b.getId().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new BookNotFoundException(id));
     }

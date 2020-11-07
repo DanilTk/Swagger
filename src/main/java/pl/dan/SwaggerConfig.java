@@ -18,5 +18,4 @@ public class SwaggerConfig {
                 .paths(PathSelectors.ant("/api/students/**"))
                 .build();
     }
-
 }

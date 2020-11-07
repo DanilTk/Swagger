@@ -2,20 +2,17 @@ package pl.dan.api;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import pl.dan.model.Student;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
+@RequiredArgsConstructor
 public class StudentApi {
-    private List<Student> students;
-
-    public StudentApi() {
-        this.students = new ArrayList<>();
-    }
+    private final List<Student> students;
 
     @ApiOperation(value = "Find student by id", notes = "provide information about student by id")
     @GetMapping("/{id}")
